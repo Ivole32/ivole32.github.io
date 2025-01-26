@@ -15,7 +15,7 @@
             color: #e0e0e0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Wichtig für Sticky-Footer */
+            min-height: 100vh;
             overflow: hidden;
         }
 
@@ -42,7 +42,6 @@
             text-align: right;
             overflow: hidden;
             position: relative;
-            left: 30px;
         }
 
         .search-bar {
@@ -85,8 +84,10 @@
         .nav-bar {
             display: flex;
             gap: 1rem;
-            align-items: center;
+            align-items: right;
             overflow: hidden;
+            position: relative;
+            right: 20px;
         }
 
         .nav-bar a {
@@ -110,7 +111,7 @@
         }
 
         main {
-            flex: 1; /* Wichtig, damit der Footer nach unten geschoben wird */
+            flex: 1;
             max-width: 100%;
             padding: 1rem;
             overflow: hidden;
@@ -119,9 +120,9 @@
         .youtube-container {
             position: relative;
             width: 90%;
-            max-width: 600px; /* Maximale Breite des Videos reduziert */
-            margin: 0 auto; /* Zentriert das Video */
-            padding-top: 56.25%; /* Verhältnis 16:9 */
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 56.25%;
             overflow: hidden;
         }
 
@@ -156,14 +157,14 @@
             <input type="text" placeholder="Search...">
         </div>
         <div class="nav-bar">
-            <a href="https://github.com/Ivole32/" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
             <a href="https://www.youtube.com/@Ivole32" target="_blank">
                 <i class="fab fa-youtube"></i>
             </a>
             <a href="https://www.twitch.tv/ivole32" target="_blank">
                 <i class="fab fa-twitch"></i>
+            </a>
+            <a href="https://github.com/Ivole32/" target="_blank">
+                <i class="fab fa-github"></i>
             </a>
         </div>
     </header>
