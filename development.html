@@ -16,54 +16,50 @@
         </div>
         <div class="nav-bar">
             <a href="https://www.youtube.com/@Ivole32" target="_blank">
-                <i class="fab fa-youtube"></i>
+            <i class="fab fa-youtube"></i>
             </a>
             <a href="https://www.twitch.tv/ivole32" target="_blank">
-                <i class="fab fa-twitch"></i>
+            <i class="fab fa-twitch"></i>
             </a>
             <a href="https://github.com/Ivole32/" target="_blank">
-                <i class="fab fa-github"></i>
+            <i class="fab fa-github"></i>
             </a>
         </div>
     </header>
     <main>  
-<body>
-    <h1>Stream-Anzeige</h1>
-    <div id="video-container">
-        <!-- Hier wird der Stream oder YouTube-Video eingebettet -->
-    </div>
+        <h1>Stream-Anzeige</h1>
+        <div id="video-container">
+            <!-- Hier wird der Stream oder YouTube-Video eingebettet -->
+        </div>
+        <script>
+            async function loadStream() {
+                try {
+                    const response = await fetch('/data.json');
+                    const data = await response.json();
 
-    <script>
-        async function loadStream() {
-            try {
-                const response = await fetch('/data.json');
-                const data = await response.json();
+                    const streamContainer = document.getElementById('stream-container');
+                    const streamStatus = data.stream_status;
 
-                const streamContainer = document.getElementById('stream-container');
-                const streamStatus = data.stream_status;
-
-                if (streamStatus === 'Live') {
-                    document.getElementById('video-container').innerHTML = ' <div style="position: relative; top: 200px; display: flex; justify-content: center; align-items: center;"> <iframe width="1280" height="720" src="https://player.twitch.tv/?channel=ivole32&parent=ivole32.github.io" title="BastiGHG Varo 4 Stats (aber anders)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>'
-                }
-                else { 
-                    document.getElementById('video-container').innerHTML =
-                   ' <div style="position: relative; top: 200px; display: flex; justify-content: center; align-items: center;"> <iframe width="1280" height="720" src="https://www.youtube.com/embed/dJzW1w1vwuo" title="BastiGHG Varo 4 Stats (aber anders)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>'
+                    if (streamStatus === 'Live') {
+                        document.getElementById('video-container').innerHTML = ' <div style="position: relative; top: 200px; display: flex; justify-content: center; align-items: center;"> <iframe width="1280" height="720" src="https://player.twitch.tv/?channel=ivole32&parent=ivole32.github.io" title="BastiGHG Varo 4 Stats (aber anders)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>'
                     }
-            } 
-            catch (error) {
-                console.error('Fehler beim Abrufen der JSON-Daten:', error);
+                    else { 
+                        document.getElementById('video-container').innerHTML = ' <div style="position: relative; top: 200px; display: flex; justify-content: center; align-items: center;"> <iframe width="1280" height="720" src="https://www.youtube.com/embed/dJzW1w1vwuo" title="BastiGHG Varo 4 Stats (aber anders)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>'
+                        }
+                    } 
+                catch (error) {
+                    console.error('Fehler beim Abrufen der JSON-Daten:', error);
+                }
             }
-        }
 
-        // Beim Laden der Seite den Stream-Status laden
-        window.onload = loadStream;
-    </script>
-</body>
-</html>
-
+            window.onload = loadStream;
+        </script>
     </main>
-    <footer>
-        <p>&copy; 2025 Ivole32. All rights reserved.</p>
-    </footer>
 </body>
+<footer>
+    <p>&copy; 2025 Ivole32. All rights reserved.</p>
+</footer>
 </html>
+
+
+
