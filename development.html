@@ -169,11 +169,70 @@
         </div>
     </header>
     <main>
+        <!--
         <div style="position: relative; top: 200px; display: flex; justify-content: center; align-items: center;">
             <iframe width="1280" height="720" src="https://www.youtube.com/embed/dJzW1w1vwuo" title="BastiGHG Varo 4 Stats (aber anders)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div id="stream-container"></div>
-        </main>
+        <div id="stream-container"></div> 
+        -->    
+        <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream-Status</title>
+</head>
+<body>
+    <h1>Stream-Anzeige</h1>
+    <div id="stream-container">
+        <!-- Hier wird der Stream oder YouTube-Video eingebettet -->
+    </div>
+
+    <script>
+        // Funktion, die die JSON-Daten abruft und den Stream oder YouTube-Video einbettet
+        async function loadStream() {
+            try {
+                // Abrufen der JSON-Datei mit den Stream-Informationen
+                const response = await fetch('/data.json');
+                const data = await response.json();
+
+                const streamContainer = document.getElementById('stream-container');
+                const streamStatus = data.stream_status;
+
+                // Überprüfen des Stream-Status
+                if (streamStatus === 'live') {
+                    // Twitch-Stream einbetten, wenn der Stream live ist
+                    const twitchEmbed = document.createElement('iframe');
+                    twitchEmbed.setAttribute('src', `https://player.twitch.tv/?channel=${data.username}&autoplay=true`);
+                    twitchEmbed.setAttribute('height', '600');
+                    twitchEmbed.setAttribute('width', '800');
+                    twitchEmbed.setAttribute('frameborder', '0');
+                    twitchEmbed.setAttribute('allowfullscreen', 'true');
+                    streamContainer.innerHTML = ''; // Inhalt zurücksetzen
+                    streamContainer.appendChild(twitchEmbed);
+                } else {
+                    // YouTube-Video einbetten, wenn der Stream nicht live ist
+                    const youtubeEmbed = document.createElement('iframe');
+                    youtubeEmbed.setAttribute('src', 'https://youtu.be/dJzW1w1vwuo'); // Beispiel YouTube-Video
+                    youtubeEmbed.setAttribute('height', '600');
+                    youtubeEmbed.setAttribute('width', '800');
+                    youtubeEmbed.setAttribute('frameborder', '0');
+                    youtubeEmbed.setAttribute('allowfullscreen', 'true');
+                    streamContainer.innerHTML = ''; // Inhalt zurücksetzen
+                    streamContainer.appendChild(youtubeEmbed);
+                }
+            } catch (error) {
+                console.error('Fehler beim Abrufen der JSON-Daten:', error);
+            }
+        }
+
+        // Beim Laden der Seite den Stream-Status laden
+        window.onload = loadStream;
+    </script>
+</body>
+</html>
+
+    </main>
     <footer>
         <p>&copy; 2025 Ivole32. All rights reserved.</p>
     </footer>
