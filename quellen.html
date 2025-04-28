@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quellen</title>
+  <style>
+    /* Grundlegendes Layout */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0b3ff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #660066;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .quelle {
+      background: #1a001a;
+      border: 1px solid #660066;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .quelle:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(102, 0, 102, 0.7);
+    }
+
+    footer {
+      background-color: #660066;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #d580ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Anpassungen */
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+      }
+      .quelle {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quellen</h1>
+  </header>
+
+  <main>
+    <div class="quelle">
+      <p><strong>Website:</strong> <a href="https://beispielseite.de" target="_blank">https://beispielseite.de</a></p>
+    </div>
+    <div class="quelle">
+      <p><strong>Buch:</strong> <em>Webentwicklung für Einsteiger</em>, Max Mustermann, 2022</p>
+    </div>
+    <div class="quelle">
+      <p><strong>Artikel:</strong> <a href="https://andereseite.de/artikel" target="_blank">Responsive Design Grundlagen</a></p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Quellenübersicht
+  </footer>
+</body>
+</html>
