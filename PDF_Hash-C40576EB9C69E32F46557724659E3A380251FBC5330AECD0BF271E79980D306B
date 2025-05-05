@@ -1,1 +1,54 @@
-<h1>C40576EB9C69E32F46557724659E3A380251FBC5330AECD0BF271E79980D306B</h1>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Hash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #d0aaff;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2em;
+      text-align: center;
+    }
+    #hash {
+      background-color: #1a001a;
+      padding: 1em;
+      border-radius: 8px;
+      word-break: break-all;
+      font-size: 1em;
+      max-width: 100%;
+      border: 1px solid #5a005a;
+      margin-bottom: 1em;
+    }
+    button {
+      background-color: #5a005a;
+      color: white;
+      border: none;
+      padding: 0.6em 1.2em;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div id="hash">C40576EB9C69E32F46557724659E3A380251FBC5330AECD0BF271E79980D306B</div>
+  <button onclick="copyHash()">Hash kopieren</button>
+
+  <script>
+    function copyHash() {
+      const hash = document.getElementById('hash').innerText;
+      navigator.clipboard.writeText(hash).then(() => {
+        alert("Hash kopiert!");
+      });
+    }
+  </script>
+</body>
+</html>
+
