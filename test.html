@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <title>Externe Website im iFrame</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      overflow: hidden; /* verhindert Scrollbars auf dem Elternelement */
+      height: 100%;
     }
     iframe {
       width: 100vw;
       height: 100vh;
       border: none;
+      overflow: hidden; /* deaktiviert Scrollbars im Frame selbst */
+      scrollbar-width: none; /* für Firefox */
     }
   </style>
 </head>
 <body>
-  <iframe src="https://velyzo.de"></iframe>
+  <iframe src="https://velyzo.de" scrolling="no"></iframe>
 </body>
 </html>
