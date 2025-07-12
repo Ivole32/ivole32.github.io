@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambling Simulator - Links</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .link-card {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .link-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .link-card h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .link-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .warning::before {
+            content: "⚠️ ";
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gambling Simulator</h1>
+            <p>Dokumentation und Demo-Links</p>
+        </header>
+
+        <main>
+            <div class="link-card">
+                <h2>📚 GitHub Dokumentation</h2>
+                <p>
+                    Hier finden Sie die vollständige Dokumentation des Gambling Simulators auf GitHub. 
+                    Die Dokumentation enthält Installationsanweisungen, API-Referenz und Beispiele.
+                </p>
+                <a href="https://github.com/ivole32/gambling-simulator/blob/main/README.md" 
+                   class="btn" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    Zur GitHub Dokumentation
+                </a>
+            </div>
+
+            <div class="link-card">
+                <h2>🐛 Debug Demo (Bekannte Bugs)</h2>
+                <div class="warning">
+                    Diese Demo Version enthält bewusst eingebaute Bugs zu Testzwecken!
+                </div>
+                <p>
+                    Diese Demo-Version des Gambling Simulators enthält verschiedene bekannte Bugs und 
+                    Probleme. Sie wird zu Entwicklungs- und Testzwecken bereitgestellt.
+                </p>
+                <p><strong>Bekannte Probleme:</strong></p>
+                <ul>
+                    <li>Falsche Gewinnberechnung bei bestimmten Kombinationen</li>
+                    <li>Memory Leaks bei längerer Nutzung</li>
+                    <li>UI-Glitches bei schnellen Klicks</li>
+                    <li>Unbehandelte Exceptions in Edge Cases</li>
+                </ul>
+                <a href="./test.html" 
+                   class="btn btn-danger">
+                    ⚠️ Buggy Demo starten
+                </a>
+            </div>
+
+            <div class="link-card">
+                <h2>🏠 Zurück zur Hauptseite</h2>
+                <p>
+                    Kehren Sie zur Hauptseite zurück, um weitere Projekte und Informationen zu erkunden.
+                </p>
+                <a href="./index.html" class="btn">
+                    Zur Hauptseite
+                </a>
+            </div>
+        </main>
+
+        <footer style="margin-top: 40px; text-align: center; color: #666; border-top: 1px solid #eee; padding-top: 20px;">
+            <p>&copy; 2025 Gambling Simulator Project</p>
+        </footer>
+    </div>
+</body>
+</html>
