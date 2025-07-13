@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor - Links</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin: 0 0 10px 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            margin: 0;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        .link-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .link-card h2 {
+            color: #333;
+            margin: 0 0 15px 0;
+            font-size: clamp(1.25rem, 4vw, 1.5rem);
+            font-weight: 600;
+        }
+        
+        .link-card p {
+            color: #666;
+            line-height: 1.7;
+            margin: 15px 0;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        }
+        
+        .link-card ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .link-card li {
+            margin: 8px 0;
+            color: #666;
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-danger:hover {
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.6);
+        }
+        
+        .warning {
+            background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+            border: none;
+            color: #2d3436;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(253, 203, 110, 0.3);
+        }
+        
+        .warning::before {
+            content: "⚠️ ";
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                padding: 30px 15px;
+                margin-bottom: 30px;
+            }
+            
+            .link-card {
+                padding: 25px 20px;
+                margin: 20px 0;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 18px 20px;
+                margin-top: 15px;
+            }
+            
+            .warning {
+                padding: 15px;
+                margin: 15px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 25px 15px;
+            }
+            
+            .link-card {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>System Monitor</h1>
+            <p>Documentation and Demo Links</p>
+        </header>
+
+        <main>
+            <div class="link-card">
+                <h2>📚 GitHub Documentation</h2>
+                <p>
+                    Here you can find the complete documentation of the System Monitor on GitHub. 
+                    The documentation contains installation instructions and explanations of the main features.
+                </p>
+                <a href="https://github.com/Ivole32/system-monitor/wiki" 
+                   class="btn" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    Go to GitHub Documentation
+                </a>
+            </div>
+
+            <div class="link-card">
+                <h2>Download executable</h2>
+                <div class="warning">
+                    You have to run the executable from the terminal (linux only) -> It is recommended to read the documentation first.
+                </div>
+                <a href="https://github.com/Ivole32/system-monitor/releases/download/Full/system-monitor" 
+                   class="btn">
+                    Download executable
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
