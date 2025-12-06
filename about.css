@@ -160,48 +160,7 @@ body {
 .subtitle {
     font-size: 1.5rem;
     color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-/* Social Links */
-.social-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
     margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--bg-card);
-    color: var(--text-primary);
-    text-decoration: none;
-    border-radius: 50px;
-    border: 1px solid var(--border-color);
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: var(--transition);
-    box-shadow: var(--shadow-sm);
-}
-
-.social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent-primary);
-}
-
-.social-link svg {
-    flex-shrink: 0;
-}
-
-.kofi-link:hover {
-    background: linear-gradient(135deg, #ff5e5b 0%, #ff4757 100%);
-    color: white;
-    border-color: #ff5e5b;
 }
 
 .hero-tags {
@@ -431,20 +390,6 @@ body {
 
     .subtitle {
         font-size: 1.2rem;
-    }
-
-    .social-links {
-        gap: 0.75rem;
-    }
-
-    .social-link {
-        padding: 0.4rem 0.875rem;
-        font-size: 0.9rem;
-    }
-
-    .social-link svg {
-        width: 18px;
-        height: 18px;
     }
 
     .avatar {
