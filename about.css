@@ -116,21 +116,35 @@ body {
 
 .avatar {
     margin-bottom: 1rem;
+    position: relative;
+    width: 120px;
+    height: 120px;
 }
 
-.avatar-placeholder {
+.avatar-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-hover) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
+    object-fit: cover;
     box-shadow: var(--shadow-lg);
     border: 4px solid var(--bg-card);
+    transition: var(--transition);
+}
+
+.light-mode-img {
+    display: block;
+}
+
+.dark-mode-img {
+    display: none;
+}
+
+[data-theme="dark"] .light-mode-img {
+    display: none;
+}
+
+[data-theme="dark"] .dark-mode-img {
+    display: block;
 }
 
 .title {
@@ -378,10 +392,14 @@ body {
         font-size: 1.2rem;
     }
 
-    .avatar-placeholder {
+    .avatar {
         width: 100px;
         height: 100px;
-        font-size: 2.5rem;
+    }
+
+    .avatar-img {
+        width: 100px;
+        height: 100px;
     }
 
     .section-title {
