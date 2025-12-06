@@ -1,13 +1,152 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Weiterleitung nach 0 Sekunden -->
-    <meta http-equiv="refresh" content="0; url=https://ivole32.github.io/about.html">
-    <title>Weiterleitung...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=about.html">
+    <title>Ivole32 - Redirecting...</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/ivole32_black.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/ivole32_black.png">
+    <link rel="apple-touch-icon" href="images/ivole32_black.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
+                         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+            color: white;
+        }
+
+        .redirect-container {
+            text-align: center;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 1.5rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            font-weight: 600;
+        }
+
+        a:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .redirect-container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .logo img {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>You are being redirected…  
-    If not, <a href="https://ivole32.github.io/about.html">click here</a>.</p>
+    <div class="redirect-container">
+        <div class="logo">
+            <img src="images/ivole32_black.png" alt="Ivole32 Logo">
+        </div>
+        <h1>Redirecting to Ivole32</h1>
+        <div class="spinner"></div>
+        <p>You are being redirected automatically...</p>
+        <a href="about.html">Click here if not redirected</a>
+    </div>
+
+    <script>
+        // Fallback redirect after 100ms if meta refresh doesn't work
+        setTimeout(() => {
+            window.location.href = 'about.html';
+        }, 100);
+    </script>
 </body>
 </html>
