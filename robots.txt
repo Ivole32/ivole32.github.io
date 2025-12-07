@@ -1,0 +1,14 @@
+# robots.txt for ivole32.github.io
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow old/archived content
+Disallow: /old/
+
+# Sitemap location
+Sitemap: https://ivole32.github.io/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
