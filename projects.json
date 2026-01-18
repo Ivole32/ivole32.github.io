@@ -24,7 +24,7 @@
       "github_repo": "Ivole32/DJ-AI",
       "description":"An intelligent DJ tracklist generator and playlist management platform powered by machine learning and audio analysis",
       "order": 2,
-      "datailPage": "dj-ai.ideora.net",
+      "detailPage": "dj-ai.ideora.net",
       "tags": ["Python", "Machine Learning", "DJ"],
       "featured": true,
       "organisation": null,
@@ -80,7 +80,7 @@
       "order": 4,
       "detailPage": "project-detail.html?repo=Ivole32/remote-workflow",
       "tags": ["Python", "SSH", "Automation", "Windows", "Linux", "DevOps"],
-      "featured": true,
+      "featured": false,
       "organization": null,
       "contributors": [
         {
