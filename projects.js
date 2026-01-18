@@ -193,7 +193,7 @@ function renderProjects(projects, container) {
 function openLink(url) {
     if (url.startsWith("https://") || url.startsWith("http://")) {
         // Open external URL
-        windows.open(url, "_blank");
+        window.open(url, "_blank");
     } else {
         window.location.href = url;
     }
