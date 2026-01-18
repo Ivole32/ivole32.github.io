@@ -190,6 +190,15 @@ function renderProjects(projects, container) {
     });
 }
 
+function openLink(url) {
+    if (url.startsWith("https://") || url.startsWith("http://")) {
+        // Open external URL
+        windows.open(url, "_blank");
+    } else {
+        window.location.href = url;
+    }
+}
+
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = `project-card ${project.featured ? 'featured' : ''}`;
@@ -297,7 +306,7 @@ function createProjectCard(project) {
             if (e.target.closest('a') || e.target.closest('button')) {
                 return;
             }
-            window.location.href = project.detailPage;
+            openLink(project.detailPage)
         });
     }
     
