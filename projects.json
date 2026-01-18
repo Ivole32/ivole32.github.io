@@ -19,11 +19,29 @@
       ]
     },
     {
-        "id": 2,
+      "id": 2,
+      "name": "DJ-AI",
+      "github_repo": "Ivole32/DJ-AI",
+      "description":"An intelligent DJ tracklist generator and playlist management platform powered by machine learning and audio analysis",
+      "order": 2,
+      "datailPage": "dj-ai.ideora.net",
+      "tags": ["Python", "Machine Learning", "DJ"],
+      "featured": true,
+      "organisation": null,
+      "contributors": [
+        {
+          "name": "Ivole32",
+          "github": "Ivole32",
+          "role": "Owner"
+        }
+      ]
+    },
+    {
+        "id": 3,
         "name": "Linux API",
         "github_repo": "Ivole32/Linux-API",
         "description": "A linux API server to get system informations and other live informations about your linux machine.",
-        "order": 2,
+        "order": 3,
         "detailPage": "project-detail.html?repo=Ivole32/Linux-API",
         "tags": ["Python", "FastAPI", "API", "Linux"],
         "featured": true,
@@ -37,11 +55,11 @@
         ]
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Requirement Loader",
       "github_repo": "Ivole32/requirement-loader",
       "description": "Automatically fetch and install Python dependencies from a remote server. Without the need of updating the requirements.txt file in autoscaling setups or updating manually.",
-      "order": 4,
+      "order": 5,
       "detailPage": "project-detail.html?repo=Ivole32/requirement-loader",
       "tags": ["Python", "Automation", "DevOps"],
       "featured": false,
@@ -55,11 +73,11 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Remote Workflow",
       "github_repo": "Ivole32/remote-workflow",
       "description": "A powerful tool that allows you to share files from your Windows PC over an SSH tunnel and define custom workflows to run commands on a remote Linux machine.",
-      "order": 3,
+      "order": 4,
       "detailPage": "project-detail.html?repo=Ivole32/remote-workflow",
       "tags": ["Python", "SSH", "Automation", "Windows", "Linux", "DevOps"],
       "featured": true,
@@ -73,4 +91,3 @@
       ]
     }
   ]
-}
