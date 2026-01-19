@@ -89,6 +89,24 @@
           "role": "Owner"
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "More on GitHub",
+      "github_repo": "Ivole32/Ivole32",
+      "description": "You can see more projects on my GitHub profile.",
+      "order": 6,
+      "detailPage": "https://github.com/ivole32",
+      "tags": ["GitHub"],
+      "featured": false,
+      "organization": null,
+      "contributors": [
+        {
+          "name": "Ivole32",
+          "github": "Ivole32",
+          "role": "Owner"
+        }
+      ]
     }
   ]
 }
