@@ -195,6 +195,7 @@ function openLink(url) {
         // Open external URL
         window.open(url, "_blank");
     } else {
+        // Navigate to internal page
         window.location.href = url;
     }
 }
