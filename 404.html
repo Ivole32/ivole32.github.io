@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Redirecting / Not found</title>
+    <script>
+        (function () {
+            const path = window.location.pathname;
+
+            const match = path.match(/^\/c\/([a-fA-F0-9]+)/);
+
+            if (match) {
+                const commitId = match[1];
+
+                const target = "https://github.com/ivole32/linux-api/commit/" + commitId;
+
+                window.location.replace(target);
+                return;
+            }
+
+            // Show normal 404 if no Linux-API commit
+        })();
+    </script>
+</head>
+<body>
+    <h1>404 - Page not found</h1>
+    <p>The requested page does not exist.</p>
+</body>
+</html>
