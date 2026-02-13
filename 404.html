@@ -2,18 +2,27 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Redirecting / Not found</title>
+    <title>404 - Not found</title>
     <script>
         (function () {
+            // Get current route
             const path = window.location.pathname;
 
+            // Check if the route matches a commit route (/c/<github commit hash>)
             const match = path.match(/^\/c\/([a-fA-F0-9]+)/);
 
+            // If the route is a commit route
             if (match) {
+                // Set page title
+                document.title = "Redirecting";
+
+                // Get commit Id
                 const commitId = match[1];
 
+                // Set target to commit in repository, can implement multiple repos later but not needed now
                 const target = "https://github.com/ivole32/linux-api/commit/" + commitId;
 
+                // Redirect user to commit page
                 window.location.replace(target);
                 return;
             }
@@ -24,6 +33,6 @@
 </head>
 <body>
     <h1>404 - Page not found</h1>
-    <p>The requested page does not exist.</p>
+    <p>The requested page does not exist...</p>
 </body>
 </html>
