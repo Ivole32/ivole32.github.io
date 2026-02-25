@@ -43,7 +43,7 @@
         "description": "A linux API server to get system informations and other live informations about your linux machine.",
         "order": 4,
         "detailPage": "project-detail.html?repo=Ivole32/Linux-API",
-        "tags": ["Python", "FastAPI", "API", "Linux"],
+        "tags": ["Python", "API", "Linux"],
         "featured": true,
         "organization": null,
         "contributors": [
@@ -79,7 +79,7 @@
       "description": "Automatically fetch and install Python dependencies from a remote server. Without the need of updating the requirements.txt file in autoscaling setups or updating manually.",
       "order": 5,
       "detailPage": "project-detail.html?repo=Ivole32/requirement-loader",
-      "tags": ["Python", "Automation", "DevOps"],
+      "tags": ["Python", "Automation"],
       "featured": false,
       "organization": null,
       "contributors": [
@@ -97,7 +97,7 @@
       "description": "A powerful tool that allows you to share files from your Windows PC over an SSH tunnel and define custom workflows to run commands on a remote Linux machine.",
       "order": 4,
       "detailPage": "project-detail.html?repo=Ivole32/remote-workflow",
-      "tags": ["Python", "SSH", "Automation", "Windows", "Linux", "DevOps"],
+      "tags": ["Python", "Automation"],
       "featured": false,
       "organization": null,
       "contributors": [
