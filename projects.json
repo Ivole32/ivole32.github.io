@@ -41,7 +41,7 @@
         "name": "Linux API",
         "github_repo": "Ivole32/Linux-API",
         "description": "A linux API server to get system informations and other live informations about your linux machine.",
-        "order": 3,
+        "order": 4,
         "detailPage": "project-detail.html?repo=Ivole32/Linux-API",
         "tags": ["Python", "FastAPI", "API", "Linux"],
         "featured": true,
@@ -53,6 +53,24 @@
             "role": "Owner"
             }
         ]
+    },
+    {
+      "id": 7,
+      "name": "FlavorScribe",
+      "github_repo": "Ivole32/FlavorScribe",
+      "description": "An extension to automatically sync Flavortown devlogs into a GitHub repository.",
+      "order": 6,
+      "detailPage": "project-detail.html?repo=Ivole32/FlavorScribe",
+      "tags": ["Python", "Automation"],
+      "featured": false,
+      "organisation": null,
+      "contributors": [
+        {
+          "name": "Ivole32",
+          "github": "Ivole32",
+          "role": "Owner"
+        }
+      ]
     },
     {
       "id": 4,
@@ -95,7 +113,7 @@
       "name": "More on GitHub",
       "github_repo": "Ivole32/Ivole32",
       "description": "You can see more projects on my GitHub profile.",
-      "order": 6,
+      "order": 7,
       "detailPage": "https://github.com/ivole32",
       "tags": ["GitHub"],
       "featured": false,
