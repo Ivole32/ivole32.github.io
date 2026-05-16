@@ -18,6 +18,12 @@
     <meta name="color-scheme" content="dark" />
 
     <link rel="canonical" href="https://ivole32.me/" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="QueueForge Blog RSS"
+      href="https://queueforge.dev/blog/rss.xml"
+    />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="style.css" />
 
@@ -91,6 +97,7 @@
         <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
           <a href="#profiles">Profiles</a>
           <a href="#footer">Contact</a>
         </nav>
@@ -233,6 +240,77 @@
                 <span>Frontend</span>
               </div>
               <a class="card-link" href="https://github.com/Ivole32/ivole32.github.io" aria-label="Placeholder link">See on GitHub</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">QueueForge Blog</p>
+            <h2>Latest notes, updates, and deep dives.</h2>
+            <p>QueueForge shares product updates, observability notes, and build logs. Each card opens the full article.</p>
+          </div>
+          <div class="blog-actions reveal">
+            <a
+              class="btn btn-primary"
+              href="https://queueforge.dev/blog?utm_source=ivole32.me&utm_medium=blogsectioncta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open blog
+            </a>
+            <a
+              class="btn btn-ghost"
+              href="https://queueforge.dev/blog/rss.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RSS feed
+            </a>
+          </div>
+          <div class="grid blog-grid" data-blog-feed>
+            <article class="card blog-card reveal">
+              <div class="card-top">
+                <p class="card-eyebrow">QueueForge Blog</p>
+                <h3>Visit the full blog</h3>
+              </div>
+              <p class="blog-excerpt">
+                Product updates, observability notes, and build logs are published on queueforge.dev.
+              </p>
+              <div class="blog-meta">
+                <span>queueforge.dev/blog</span>
+                <span>Updated regularly</span>
+              </div>
+              <a
+                class="card-link"
+                href="https://queueforge.dev/blog?utm_source=ivole32.me&utm_medium=blogfallbackcard"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in new tab
+              </a>
+            </article>
+
+            <article class="card blog-card reveal">
+              <div class="card-top">
+                <p class="card-eyebrow">RSS</p>
+                <h3>Subscribe via RSS</h3>
+              </div>
+              <p class="blog-excerpt">Use the QueueForge RSS feed in your reader to stay in sync with every new post.</p>
+              <div class="blog-meta">
+                <span>queueforge.dev/blog/rss.xml</span>
+                <span>RSS 2.0 feed</span>
+              </div>
+              <a
+                class="card-link"
+                href="https://queueforge.dev/blog/rss.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open RSS feed
+              </a>
             </article>
           </div>
         </div>

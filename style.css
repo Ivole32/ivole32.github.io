@@ -387,6 +387,10 @@ a:hover {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.blog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .profile-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -412,6 +416,12 @@ a:hover {
   gap: 1rem;
 }
 
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .project-card h3 {
   font-size: 1.3rem;
   margin-top: 0.3rem;
@@ -419,6 +429,27 @@ a:hover {
 
 .project-card p {
   color: var(--muted);
+}
+
+.blog-excerpt {
+  color: var(--muted);
+}
+
+.blog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: var(--space-3);
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .card-top {
@@ -656,12 +687,24 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .profile-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-meta {
+    flex-direction: column;
+  }
+
   .profile-grid {
     grid-template-columns: 1fr;
   }
