@@ -1,100 +1,38 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>404 | Ivo Theis</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>404 - Not found</title>
+    <script>
+        (function () {
+            // Get current route
+            const path = window.location.pathname;
 
-    <meta
-      name="description"
-      content="The page you are looking for does not exist on this site."
-    />
+            // Check if the route matches a commit route (/c/<github commit hash>)
+            const match = path.match(/^\/c\/([a-fA-F0-9]+)/);
 
-    <meta name="robots" content="noindex, follow" />
-    <meta name="theme-color" content="#0f0f10" />
+            // If the route is a commit route
+            if (match) {
+                // Set page title
+                document.title = "Redirecting";
 
-    <link rel="canonical" href="https://ivole32.me/404.html" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="style.css" />
-    <script defer data-domain="ivole32.me" data-site-id="gx_wl0kKTLHReKo" src="https://ghostlyx.com/js/script.min.js"></script>
-  </head>
+                // Get commit Id
+                const commitId = match[1];
 
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+                // Set target to commit in repository, can implement multiple repos later but not needed now
+                const target = "https://github.com/ivole32/linux-api/commit/" + commitId;
 
-    <header class="site-header" data-header>
-      <div class="container nav-wrap">
-        <a class="brand" href="index.html" aria-label="Home">Ivo Theis</a>
+                // Redirect user to commit page
+                window.location.replace(target);
+                return;
+            }
 
-        <a
-          class="status-pill"
-          href="https://queueforge.dev?utm_source=ivole32.me&utm_medium=404headerqueueforgepill"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Working on QueueForge
-        </a>
-
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-controls="primary-nav"
-          aria-expanded="false"
-        >
-          <span class="nav-toggle-label">Menu</span>
-          <span class="nav-toggle-lines" aria-hidden="true"></span>
-        </button>
-
-        <nav
-          class="nav-links"
-          id="primary-nav"
-          aria-label="Primary navigation"
-        >
-          <a href="index.html#about">About</a>
-          <a href="index.html#projects">Projects</a>
-          <a href="index.html#profiles">Profiles</a>
-          <a href="index.html#footer">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main" class="page-main">
-      <div class="container page-card error-card reveal">
-        <p class="error-code">404</p>
-        <h1>Page not found</h1>
-        <p>
-          The page you are looking for does not exist or has moved. Use one of
-          the options below to keep exploring.
-        </p>
-        <div class="error-actions">
-          <a class="btn btn-primary" href="index.html">Back to home</a>
-          <a class="btn btn-ghost" href="index.html#projects">See projects</a>
-        </div>
-        <p class="error-links">
-          Or jump to <a href="index.html#about">About</a>,
-          <a href="index.html#profiles">Profiles</a>, or
-          <a href="index.html#footer">Contact</a>.
-        </p>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <span>(c) 2026 Ivo Theis</span>
-          <span class="footer-muted">
-            Privacy-first analytics, no cookies.
-          </span>
-        </div>
-
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="impressum.html">Imprint</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="script.js" defer></script>
-  </body>
+            // Show normal 404 if no Linux-API commit
+        })();
+    </script>
+</head>
+<body>
+    <h1>404 - Page not found</h1>
+    <p>The requested page does not exist...</p>
+</body>
 </html>
