@@ -25,6 +25,9 @@
       href="https://queueforge.dev/blog/rss.xml"
     />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://ghostlyx.com" crossorigin />
     <link rel="stylesheet" href="style.css" />
 
     <meta property="og:title" content="Ivo Theis | Founder-Builder for modern products" />
@@ -34,7 +37,11 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ivole32.me/" />
-    <meta property="og:image" content="https://ivole32.me/assets/og-image.svg" />
+    <meta property="og:image" content="https://ivole32.me/assets/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ivo Theis - Founder-Builder, QueueForge, Creative Tech" />
     <meta property="og:site_name" content="Ivo Theis" />
     <meta property="og:locale" content="en_US" />
 
@@ -44,35 +51,62 @@
       name="twitter:description"
       content="QueueForge, startup formation, and modern software products. Minimal, fast, privacy-first."
     />
-    <meta name="twitter:image" content="https://ivole32.me/assets/og-image.svg" />
+    <meta name="twitter:image" content="https://ivole32.me/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Ivo Theis - Founder-Builder, QueueForge, Creative Tech" />
 
     <script type="application/ld+json">
-      [
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Ivo Theis",
-          "url": "https://ivole32.me/",
-          "jobTitle": "Founder-Builder",
-          "description": "Builds and ships modern software products like QueueForge.",
-          "knowsAbout": [
-            "Startup formation",
-            "Software products",
-            "Web development",
-            "Gaming",
-            "Creative tech",
-            "Building in public"
-          ],
-          "sameAs": ["https://queueforge.dev/"]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Ivo Theis",
-          "url": "https://ivole32.me/",
-          "description": "Minimal founder site for modern software and startup projects."
-        }
-      ]
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://ivole32.me/#person",
+            "name": "Ivo Theis",
+            "givenName": "Ivo",
+            "familyName": "Theis",
+            "url": "https://ivole32.me/",
+            "image": "https://ivole32.me/assets/og-image.png",
+            "jobTitle": "Founder-Builder",
+            "description": "Builds and ships modern software products like QueueForge.",
+            "knowsAbout": [
+              "Startup formation",
+              "Software products",
+              "Web development",
+              "Gaming",
+              "Creative tech",
+              "Building in public"
+            ],
+            "sameAs": [
+              "https://queueforge.dev/",
+              "https://github.com/Ivole32",
+              "https://peerlist.io/ivotheis",
+              "https://www.linkedin.com/in/ivo-theis-b7a82137b/",
+              "https://www.udemy.com/user/patrick-theis-4/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ivole32.me/#website",
+            "name": "Ivo Theis",
+            "url": "https://ivole32.me/",
+            "description": "Minimal founder site for modern software and startup projects.",
+            "inLanguage": "en",
+            "author": { "@id": "https://ivole32.me/#person" },
+            "publisher": { "@id": "https://ivole32.me/#person" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ivole32.me/#webpage",
+            "url": "https://ivole32.me/",
+            "name": "Ivo Theis | Founder-Builder for modern products",
+            "description": "Founder-builder focused on startup formation, QueueForge, and modern software products. Building in public across creative tech, gaming, and web development.",
+            "inLanguage": "en",
+            "isPartOf": { "@id": "https://ivole32.me/#website" },
+            "about": { "@id": "https://ivole32.me/#person" },
+            "primaryImageOfPage": "https://ivole32.me/assets/og-image.png"
+          }
+        ]
+      }
     </script>
     <script defer data-domain="ivole32.me" data-site-id="gx_wl0kKTLHReKo" src="https://ghostlyx.com/js/script.min.js"></script>
   </head>
@@ -150,7 +184,7 @@
             <p>
               I combine software engineering with a feel for design and rhythm. Beyond product development, I am into
               DJing, gaming, and interactive experiences. The goal is to build products that are clear, fast, and
-              relevant long-term.
+              relevant in the long run.
             </p>
           </div>
           <div class="about-grid reveal">
@@ -160,7 +194,7 @@
             </div>
             <div class="card mini-card">
               <h3>Creative Tech</h3>
-              <p>Projects at the intersection of web, music, and realtime systems.</p>
+              <p>Projects at the intersection of web, music, and real-time systems.</p>
             </div>
             <div class="card mini-card">
               <h3>Builder Mindset</h3>
@@ -206,13 +240,21 @@
                 <p class="card-eyebrow">API</p>
                 <h3>Linux-API</h3>
               </div>
-              <p>Linux-API is a small REST API service for collecting and exposing metrics and user data for Linux systems.</p>
+              <p>Linux-API is a small REST API service for collecting and exposing metrics and user data from Linux systems.</p>
               <div class="tag-list">
                 <span>API</span>
                 <span>Linux</span>
                 <span>Observability</span>
               </div>
-              <a class="card-link" href="https://github.com/Ivole32/Linux-API" aria-label="Placeholder link">See on GitHub</a>
+              <a
+                class="card-link"
+                href="https://github.com/Ivole32/Linux-API"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="See Linux-API on GitHub"
+              >
+                See on GitHub
+              </a>
             </article>
 
             <article class="card project-card reveal">
@@ -226,7 +268,15 @@
                 <span>Machine Learning</span>
                 <span>DJ</span>
               </div>
-              <a class="card-link" href="https://dj-ai.ivole32.me" aria-label="Placeholder link">Try DJ AI</a>
+              <a
+                class="card-link"
+                href="https://dj-ai.ivole32.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Try DJ AI"
+              >
+                Try DJ AI
+              </a>
             </article>
 
             <article class="card project-card reveal">
@@ -234,13 +284,21 @@
                 <p class="card-eyebrow">Programming Course</p>
                 <h3>Python GUI Campus</h3>
               </div>
-              <p>A complete German course on how to build GUI applications with Python</p>
+              <p>A complete German course on how to build GUI applications with Python.</p>
               <div class="tag-list">
-                <span>Knowlege</span>
+                <span>Knowledge</span>
                 <span>Python</span>
                 <span>GUI</span>
               </div>
-              <a class="card-link" href="https://www.udemy.com/course/python-gui-campus-von-null-zur-eigenen-anwendung/?referralCode=E6EE4AAA6C149FB3572E" aria-label="Placeholder link">See on Udemy</a>
+              <a
+                class="card-link"
+                href="https://www.udemy.com/course/python-gui-campus-von-null-zur-eigenen-anwendung/?referralCode=E6EE4AAA6C149FB3572E"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="See Python GUI Campus on Udemy"
+              >
+                See on Udemy
+              </a>
             </article>
           </div>
         </div>
@@ -449,7 +507,7 @@
     <footer id="footer" class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <span>(c) 2026 Ivo Theis</span>
+          <span>&copy; 2026 Ivo Theis</span>
           <span class="footer-muted">Privacy-first analytics, no cookies.</span>
         </div>
         <div class="footer-links">
